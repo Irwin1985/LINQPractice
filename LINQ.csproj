@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HelloLinq.cs" />
+    <Compile Include="LanguageFeature.cs" />
     <Compile Include="LinqToSQL.cs" />
     <Compile Include="LinqToXML.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

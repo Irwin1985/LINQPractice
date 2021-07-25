@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,19 @@ namespace LINQ
         static void Main(string[] args)
         {
             //LinqToXML.ShowSample();
-            LinqToSQL.ShowSample();           
+            //LinqToSQL.ShowSample();
+            //ShowProcessList();
+            LanguageFeature.DisplayProcesses();
+        }
+        public static void ShowProcessList()
+        {
+            List<String> processes = new List<string>();
+            foreach (Process process in Process.GetProcesses())
+            {
+                processes.Add(process.ProcessName);                
+            }
+            foreach(var p in processes)
+                Console.WriteLine(p);
         }
         public static void ConnecToSQLServer()
         {
