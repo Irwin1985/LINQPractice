@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 namespace LINQ
 {
     class HelloLinq
-    {
+    {        
         static void Main(string[] args)
         {
             //LinqToXML.ShowSample();
             //LinqToSQL.ShowSample();
             //ShowProcessList();
-            LanguageFeature.DisplayProcesses();
+            LanguageFeature.DisplayWithDelegate();
         }
         public static void ShowProcessList()
         {
