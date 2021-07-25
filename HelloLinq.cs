@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,18 @@ namespace LINQ
     {
         static void Main(string[] args)
         {
-            LinqToXML.ShowSample();
+            //LinqToXML.ShowSample();
+            LinqToSQL.ShowSample();           
+        }
+        public static void ConnecToSQLServer()
+        {
+            string connectionString;
+            SqlConnection cnn;
+            connectionString = @"Data Source=PC-IRWIN\SQLIRWIN;Initial Catalog=Northwind;User ID=sa;Password=Subifor2012";
+            cnn = new SqlConnection(connectionString);
+            cnn.Open();
+            Console.WriteLine("Connection Ok");
+            cnn.Close();
         }
         public static void HelloWorld()
         {
